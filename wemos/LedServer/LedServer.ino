@@ -23,6 +23,7 @@ uint16_t chanels[16];
 
 
 void addCORS(){
+  server.sendHeader("Access-Control-Allow-Origin", "*");
   server.sendHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS"); 
   server.sendHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   }
