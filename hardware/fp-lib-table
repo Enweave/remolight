@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name leder)(type KiCad)(uri ${KIPRJMOD}/leder.pretty)(options "")(descr ""))
+)
