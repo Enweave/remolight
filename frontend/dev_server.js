@@ -12,8 +12,9 @@ app.use(express.json());
 
 app.get('/', (req, res) => {
   res.json({
-      c0: 10,
-      c1: 20,
+      c0: 0,
+      c1: 10,
+      c2: 20,
       c3: 30,
       c4: 40,
       c5: 50,
