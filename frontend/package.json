@@ -15,7 +15,9 @@
     "vue-json-ui-editor": "^1.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0",
-    "vuex-map-fields": "^1.4.1"
+    "vuex-map-fields": "^1.4.1",
+    "workbox-cacheable-response": "^6.4.1",
+    "workbox-expiration": "^6.4.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

@@ -27,7 +27,7 @@
 export default {
   name: "ColorForm",
   data: () => ({
-    api_path: 'http://192.168.88.254:3000',
+    api_path: 'https://176.226.134.125:8001/api',
     form_data: {
       c0: 0,
       c1: 0,
