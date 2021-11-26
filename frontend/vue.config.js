@@ -1,5 +1,6 @@
 // vue.config.js
 
+const fs = require('fs');
 const path = require("path");
 const ServiceWorkerWebpackPlugin = require("serviceworker-webpack-plugin");
 
@@ -31,6 +32,13 @@ module.exports = {
             })
         ]
     },
+    devServer: {
+        https: {
+            key: fs.readFileSync('./../localhost.key.pem'),
+            cert: fs.readFileSync('./../localhost.pem'),
+        },
+        public: 'https://localhost:8080/',
+    },
     pwa: {
         name: 'Remolight appa',
         themeColor: '#ba4d4d',
@@ -43,6 +51,7 @@ module.exports = {
         workboxOptions: {
             // swSrc is required in InjectManifest mode.
             swSrc: 'src/sw.js',
+            swDest: 'sw.js'
             // ...other Workbox options...
         }
     }
