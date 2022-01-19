@@ -1,22 +1,22 @@
 <template>
   <div class="card">
-    <div class="mt-2 mb-2 card-body row">
-      <div class="col-6">
+    <div class="card-body row">
+      <div class="mt-2 mb-2 col-sm-12 col-md-6 ">
         <label class="form-label">Api path:</label>
         <input class="form-control" v-model="api_path">
       </div>
-      <div class="col-3">
+      <div class="mt-2 mb-2 col-sm-12 col-md-6 ">
         <label class="form-label">Actions:</label>
-        <div class=" d-flex justify-content-evenly align-items-center">
+        <div class=" d-flex align-items-center">
           <button class="flex-grow-0 btn btn-success" @click="getStuff">GET</button>
           <button class="flex-grow-0 btn btn-warning" @click="postStuff">POST</button>
         </div>
       </div>
     </div>
     <div class="card-body row">
-      <div class="col-3" v-for="(i, key) in form_data" :key="key">
+      <div class="col-sm-6 col-md-3 mb-2" v-for="(i, key) in form_data" :key="key">
         <label class="form-label">{{ key }}:</label>
-        <input class="form-control" v-model="form_data[key]">
+        <input type="number" min="0" max="4095" class="form-control" v-model="form_data[key]">
       </div>
     </div>
     <div class="card-footer"></div>
@@ -27,10 +27,11 @@
 export default {
   name: "ColorForm",
   data: () => ({
-    api_path: 'http://192.168.88.254:3000',
+    api_path: 'https://176.226.134.125:8001/api',
     form_data: {
       c0: 0,
       c1: 0,
+      c2: 0,
       c3: 0,
       c4: 0,
       c5: 0,

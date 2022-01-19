@@ -8,6 +8,17 @@ node version v14.17.0
 npm install
 ```
 
+### get [mkcert](https://github.com/FiloSottile/mkcert)
+
+install it and generate certificate for localhost
+
+```
+mkcert -install
+mkcert localhost
+```
+put *.pem and *key.pem files in project root. 
+they should be named `localhost.pem` and `localhost.key.pem`.
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
